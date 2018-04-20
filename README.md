@@ -2,35 +2,35 @@
 
 ### Through OpenShift's MySQL Application Terminal, create a password for the user to login
 
-`mysql -u root`
+* `mysql -u root`
 
-`mysql> USE mysql;`
+* `mysql> USE mysql;`
 
-`mysql> UPDATE user SET authentication_string=PASSWORD("ENTER_PASSWORD_HERE") WHERE User='root';`
+* `mysql> UPDATE user SET authentication_string=PASSWORD("ENTER_PASSWORD_HERE") WHERE User='root';`
 
-`mysql> FLUSH PRIVILEGES;`
+* `mysql> FLUSH PRIVILEGES;`
 
-`mysql> quit`
+* `mysql> quit`
 
 ### Now login to the terminal and create the database
 
-`mysql -u root -p`
+* `mysql -u root -p`
 
-`mysql> show databases;`
+* `mysql> show databases;`
 
-`mysql> CREATE DATABASE testerDB;`
+* `mysql> CREATE DATABASE testerDB;`
 
-`mysql> USE testerDB;`
+* `mysql> USE testerDB;`
 
-`mysql> CREATE TABLE technical_editors (tech_id int(11) NOT NULL AUTO_INCREMENT, tech_username varchar(20) DEFAULT NULL, PRIMARY KEY (tech_id));`
+* `mysql> CREATE TABLE technical_editors (tech_id int(11) NOT NULL AUTO_INCREMENT, tech_username varchar(20) DEFAULT NULL, PRIMARY KEY (tech_id));`
 
-`mysql> INSERT INTO technical_editors (tech_id, tech_username) VALUES (1, 'Java');`
+* `mysql> INSERT INTO technical_editors (tech_id, tech_username) VALUES (1, 'Java');`
 
-`mysql> INSERT INTO technical_editors (tech_id, tech_username) VALUES (2, 'Python');`
+* `mysql> INSERT INTO technical_editors (tech_id, tech_username) VALUES (2, 'Python');`
 
-`mysql> SELECT * FROM technical_editors;`
+* `mysql> SELECT * FROM technical_editors;`
 
-`mysql> DESC technical_editors;`
+* `mysql> DESC technical_editors;`
 
 ### Use the OC (Referenced from https://stackoverflow.com/questions/43912409/what-is-openshift-mysql-enabled-environment-variable-in-openshift-v3)
 
